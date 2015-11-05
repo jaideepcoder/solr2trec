@@ -36,9 +36,9 @@ import twitter4j.JSONObject;
 class RunBasicQueriesOnSolr {
 	private String queryFileName;
 	private String detectLanguageURL = "http://ws.detectlanguage.com/0.2/detect";
-	private String twitterCoreURL    = "http://sunandan.koding.io:8983/solr/TwitterCore/select";
+	private String twitterCoreURL    = "http://sunandan.koding.io:8983/solr/TwitterCore/select"; //Enter your URL here
 	private String charset;	
-	private final String API_KEY 	 = "711d7412f6f412fa86b040eee064b988";
+	private final String API_KEY 	 = "711d7412f6f412fa86b040eee064b988"; // get your own API key from the languagedetect.com ( if you wish so)
 	private final String USER_AGENT  = "Mozilla/5.0";
 	private String trecLogFile       = "query_output.txt";
 	private String workingDir;
@@ -156,8 +156,8 @@ class RunBasicQueriesOnSolr {
 		JSONObject jObjTemp;
 		if (responseFromSolr.equals(""))
 		{	
-			System.out.println("queryNumber :" + queryNumber);
-		System.out.println("-------------------------------------");	
+		//	System.out.println("queryNumber :" + queryNumber);
+		//System.out.println("-------------------------------------");	
 			return trec_Response.toString();
 		}	
 		JSONObject jObj = new JSONObject(responseFromSolr).getJSONObject("response");
@@ -173,7 +173,7 @@ class RunBasicQueriesOnSolr {
 							jObjTemp.getString("score") + " " + modelName + System.lineSeparator());
 			
 		}
-		System.out.println("***********");
+		//System.out.println("***********");
 		return trec_Response.toString();	
 	}
 	/**
@@ -193,7 +193,7 @@ class RunBasicQueriesOnSolr {
 	    	outputStreamWriter.write(trecSupportedOutput);
 
 	    	outputStreamWriter.close();
-	    	System.out.println("Created ffile is =" + new File(workingDir + trecLogFile).getAbsolutePath());
+	    	//System.out.println("Created file is =" + new File(workingDir + trecLogFile).getAbsolutePath());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
