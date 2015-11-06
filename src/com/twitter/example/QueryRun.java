@@ -38,7 +38,7 @@ class RunBasicQueriesOnSolr {
 	private String detectLanguageURL = "http://ws.detectlanguage.com/0.2/detect";
 	private String twitterCoreURL    = "http://sunandan.koding.io:8983/solr/TwitterCore/select"; //Enter your URL here
 	private String charset;	
-	private final String API_KEY 	 = "711d7412f6f412fa86b040eee064b988"; // get your own API key from the languagedetect.com ( if you wish so)
+	private final String API_KEY 	 = "711d7412f6f412fa86b040eee064b988"; // get your own API key from the detectlanguage.com ( if you wish so)
 	private final String USER_AGENT  = "Mozilla/5.0";
 	private String trecLogFile       = "query_output.txt";
 	private String workingDir;
